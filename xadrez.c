@@ -10,6 +10,8 @@ int main() {
     const int casas_bispo = 5;
     const int casas_torre = 5;
     const int casas_rainha = 8;
+    const int casas_cavalo_v = 2;
+    const int casas_cavalo_h = 1;
 
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
@@ -38,6 +40,20 @@ int main() {
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
+    printf("CAVALO\n");
+    int c_casas_v = 0; // Contador de casas verticais
+    while (c_casas_v++ < casas_cavalo_v) {
+        printf("Baixo\n");
+
+        for (int c_casas_h = 0; // Contador de casas horizontais
+            // Aqui é utilizado duas condições para que seja sabido quando o topo foi chegado.
+            c_casas_v == casas_cavalo_v && c_casas_h < casas_cavalo_h;
+            c_casas_h++) {
+
+            printf("Esquerda\n");
+        }
+    }
+    printf("\n");
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
